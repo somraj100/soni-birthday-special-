@@ -1,0 +1,78 @@
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;min-height:100%;background:#040710;color:#fff;font-family:Georgia,"Times New Roman",serif}
+body{overflow-x:hidden}
+button{font:inherit}
+.hidden{display:none!important}
+#loader{position:fixed;inset:0;z-index:99;background:radial-gradient(circle at 50% 45%,#17243d 0,#070b16 42%,#02040a 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px}
+.loader-ring{width:62px;height:62px;border-radius:50%;border:1px solid #bfc5cc55;border-top-color:#8bd5ff;border-right-color:#fff;animation:spin 1.1s linear infinite;box-shadow:0 0 35px #4ab9ff33}
+.loader-title{font-size:18px;letter-spacing:.04em}.loader-sub{opacity:.8}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+#app{position:relative;min-height:100svh;overflow:hidden;background:
+radial-gradient(circle at 50% 38%,#17233b 0,#09101f 30%,#040711 68%,#02040a 100%)}
+.stars,.stars:before,.stars:after{position:absolute;inset:0;content:"";pointer-events:none;background-image:
+radial-gradient(circle,#fff 0 1px,transparent 1.6px),radial-gradient(circle,#7ec8ff 0 1px,transparent 1.6px);
+background-size:120px 120px,190px 190px;background-position:10px 20px,70px 50px;opacity:.16;animation:drift 20s linear infinite}
+.stars:before{transform:scale(1.4);opacity:.07;animation-duration:32s}.stars:after{transform:scale(.8);opacity:.11;animation-duration:25s}
+@keyframes drift{to{transform:translate3d(20px,30px,0)}}
+.aurora{position:absolute;width:90vw;height:70vw;left:5vw;top:8vh;border-radius:50%;background:radial-gradient(ellipse,#248fe522,transparent 65%);filter:blur(30px);pointer-events:none}
+
+#hero{position:relative;z-index:2;min-height:100svh;padding:8vh 16px 5vh;text-align:center;display:flex;flex-direction:column;align-items:center}
+.eyebrow{text-transform:uppercase;letter-spacing:.28em;font:600 10px/1.5 Arial,sans-serif;color:#a9dfff;opacity:.85}
+h1{font-size:clamp(34px,8vw,68px);font-weight:400;margin:12px 0 8px;text-shadow:0 4px 30px #000}
+h1 span{font-style:italic;background:linear-gradient(100deg,#fff,#d9e1e8,#8dd5ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+h1 b{font-family:Arial;color:#b9e8ff;font-size:.6em}
+.lead{margin:0;color:#ccd7e4;font-size:15px;letter-spacing:.03em}
+
+#cakeStage{position:relative;width:min(760px,96vw);height:min(620px,67vh);min-height:430px;margin-top:12px;touch-action:none;user-select:none}
+.cake-glow{position:absolute;width:75%;height:45%;left:12.5%;bottom:13%;background:#75cfff22;filter:blur(50px);border-radius:50%}
+.cake{position:absolute;left:50%;bottom:14%;transform:translateX(-50%);width:min(520px,82vw);height:390px;filter:drop-shadow(0 28px 25px #0009);transition:transform .5s}
+.cake.cut{transform:translateX(-50%) scale(1.02)}
+.tier{position:absolute;left:50%;transform:translateX(-50%);border-radius:50%/12%;background:
+linear-gradient(180deg,#fff 0%,#eef1f4 38%,#cdd3da 58%,#fff 100%);
+box-shadow:inset 0 -12px 18px #8d969f33,inset 0 8px 12px #fff,0 12px 20px #0007}
+.tier:after{content:"";position:absolute;left:2%;right:2%;bottom:-7%;height:17%;border-radius:50%;background:#cbd1d8;z-index:-1}
+.top{width:43%;height:130px;bottom:65%;z-index:3}.mid{width:68%;height:150px;bottom:35%;z-index:2}.bottom{width:92%;height:175px;bottom:3%;z-index:1}
+.frost{position:absolute;left:0;right:0;top:4px;height:30%;border-radius:50%;background:linear-gradient(180deg,#fff,#f3f5f7);box-shadow:0 5px 8px #9aa6b233}
+.silver-line{position:absolute;left:3%;right:3%;bottom:16%;height:6px;border-radius:10px;background:linear-gradient(90deg,#8b949e,#fff,#9aa4ad,#fff,#8b949e);box-shadow:0 0 8px #fff8}
+.tier i{position:absolute;width:11px;height:11px;border-radius:50%;background:radial-gradient(circle at 30% 25%,#eafaff,#55bfff 35%,#1262a6 80%);box-shadow:0 0 10px #5fcaff88}
+.top i:nth-of-type(1){left:18%;top:28%}.top i:nth-of-type(2){left:37%;top:38%}.top i:nth-of-type(3){left:57%;top:30%}.top i:nth-of-type(4){left:75%;top:40%}.top i:nth-of-type(5){left:47%;top:18%}
+.mid i:nth-of-type(1){left:12%;top:30%}.mid i:nth-of-type(2){left:27%;top:43%}.mid i:nth-of-type(3){left:43%;top:30%}.mid i:nth-of-type(4){left:59%;top:43%}.mid i:nth-of-type(5){left:74%;top:30%}.mid i:nth-of-type(6){left:87%;top:43%}
+.bottom i:nth-of-type(1){left:8%;top:28%}.bottom i:nth-of-type(2){left:21%;top:45%}.bottom i:nth-of-type(3){left:35%;top:29%}.bottom i:nth-of-type(4){left:49%;top:45%}.bottom i:nth-of-type(5){left:63%;top:29%}.bottom i:nth-of-type(6){left:77%;top:45%}.bottom i:nth-of-type(7){left:90%;top:29%}
+.plate{position:absolute;left:3%;right:3%;height:22px;bottom:0;border-radius:50%;background:linear-gradient(#fff,#aeb7c0,#fff);box-shadow:0 8px 15px #0009}
+.candle{position:absolute;width:12px;height:50px;bottom:97%;border-radius:4px;background:repeating-linear-gradient(135deg,#fff 0 7px,#9ec5e4 7px 12px);z-index:5;box-shadow:0 2px 8px #0007}
+.candle1{left:46%}.candle2{left:39%;height:42px}.candle3{left:53%;height:44px}
+.flame{position:absolute;width:15px;height:24px;bottom:109%;border-radius:50% 50% 55% 55%;background:radial-gradient(circle at 50% 70%,#fff 0 18%,#7ed5ff 30%,#3d91ff 62%,transparent 70%);filter:drop-shadow(0 0 10px #75cfff);z-index:6;animation:flicker .7s infinite alternate}
+.flame1{left:45.7%}.flame2{left:38.7%;bottom:108%}.flame3{left:52.7%;bottom:108.5%}
+@keyframes flicker{to{transform:scale(.82,.94) rotate(3deg);opacity:.8}}
+
+#cutCanvas{position:absolute;inset:0;width:100%;height:100%;z-index:20;touch-action:none}
+#cutHint{position:absolute;left:50%;bottom:2%;transform:translateX(-50%);padding:10px 16px;border:1px solid #ffffff25;border-radius:999px;background:#07101dcc;backdrop-filter:blur(10px);font:12px Arial;color:#dceeff;white-space:nowrap;box-shadow:0 0 25px #43bfff16;z-index:22;animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{50%{box-shadow:0 0 35px #43bfff3a}}
+
+#soundBtn{position:fixed;right:16px;top:16px;z-index:50;width:42px;height:42px;border-radius:50%;border:1px solid #fff2;background:#08111dcc;color:#dff5ff;backdrop-filter:blur(10px);cursor:pointer}
+#celebration{position:relative;z-index:4;min-height:100svh;padding:15vh 22px;display:flex;flex-direction:column;align-items:center;text-align:center;background:radial-gradient(circle at 50% 40%,#163452 0,#070d19 45%,#02040a 100%)}
+.celebrate-orb{width:110px;height:110px;border-radius:50%;display:grid;place-items:center;font-size:42px;color:#dff6ff;border:1px solid #bde8ff66;box-shadow:0 0 70px #3cbaff55,inset 0 0 40px #ffffff0c;margin-bottom:25px;animation:orb 2s ease-in-out infinite}
+@keyframes orb{50%{transform:scale(1.06);box-shadow:0 0 100px #3cbaff77}}
+h2{font-size:clamp(34px,8vw,60px);font-weight:400;margin:8px 0 14px}
+#celebration p{max-width:560px;color:#cbd7e5;font-size:17px;line-height:1.8}
+#continueBtn{margin-top:25px;padding:13px 24px;border-radius:999px;border:1px solid #bcecff55;background:#fff;color:#07101b;cursor:pointer}
+
+#message{position:relative;z-index:4;min-height:100svh;padding:10vh 18px;display:grid;place-items:center;background:linear-gradient(#02040a,#07101e)}
+.message-card{max-width:680px;padding:42px 30px;border:1px solid #ffffff20;border-radius:28px;background:#ffffff0b;backdrop-filter:blur(20px);box-shadow:0 25px 80px #0008;text-align:center}
+.message-card h2{font-size:clamp(32px,7vw,52px)}.message-card p{color:#d1dce8;line-height:1.9;font-size:16px}.small-heart{color:#9bdcff;font-size:25px}.signature{margin-top:28px;color:#9edcff;font-style:italic}
+
+#particles{position:fixed;inset:0;pointer-events:none;z-index:3}
+.p{position:absolute;width:5px;height:5px;border-radius:50%;background:#9dddff;box-shadow:0 0 12px #62c9ff;animation:fall linear forwards}
+@keyframes fall{from{transform:translate3d(0,-20px,0) scale(.5);opacity:0}15%{opacity:1}to{transform:translate3d(var(--dx),105vh,0) scale(1.2);opacity:0}}
+
+.split-left{transform:translateX(calc(-50% - 22px)) rotate(-1deg)!important}
+.split-right{transform:translateX(calc(-50% + 22px)) rotate(1deg)!important}
+
+@media(max-width:600px){
+  #hero{padding-top:7vh}.lead{font-size:14px}
+  #cakeStage{height:57vh;min-height:390px}
+  .cake{height:335px;width:92vw;bottom:16%}
+  .tier.top{height:108px}.tier.mid{height:130px}.tier.bottom{height:150px}
+  #cutHint{font-size:11px;bottom:1%;max-width:90vw}
+}

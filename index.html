@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="theme-color" content="#050914">
+<title>For Soni ❤️</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="loader">
+  <div class="loader-ring"></div>
+  <div class="loader-title">Preparing something special for Soni…</div>
+  <div class="loader-sub">❤️</div>
+</div>
+
+<main id="app" class="hidden">
+  <div class="stars"></div>
+  <div class="aurora"></div>
+  <div id="particles"></div>
+
+  <button id="soundBtn" aria-label="Mute music">♪</button>
+
+  <section id="hero">
+    <div class="eyebrow">A little birthday surprise</div>
+    <h1>Happy Birthday, <span>Soni</span> <b>♥</b></h1>
+    <p class="lead">Today, you get to cut your own cake…</p>
+
+    <div id="cakeStage">
+      <div class="cake-glow"></div>
+      <div id="cake" class="cake" aria-label="Interactive birthday cake">
+        <div class="candle candle1"></div><div class="flame flame1"></div>
+        <div class="candle candle2"></div><div class="flame flame2"></div>
+        <div class="candle candle3"></div><div class="flame flame3"></div>
+
+        <div class="tier top">
+          <div class="frost"></div>
+          <div class="silver-line"></div>
+          <i></i><i></i><i></i><i></i><i></i>
+        </div>
+        <div class="tier mid">
+          <div class="frost"></div>
+          <div class="silver-line"></div>
+          <i></i><i></i><i></i><i></i><i></i><i></i>
+        </div>
+        <div class="tier bottom">
+          <div class="frost"></div>
+          <div class="silver-line"></div>
+          <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+        </div>
+        <div class="plate"></div>
+      </div>
+
+      <canvas id="cutCanvas"></canvas>
+      <div id="cutHint">Touch the cake and swipe to cut it ✨</div>
+    </div>
+  </section>
+
+  <section id="celebration" class="hidden">
+    <div class="celebrate-orb">♥</div>
+    <div class="eyebrow">The cake is cut</div>
+    <h2>You did it, Soni! ❤️</h2>
+    <p>Happy Birthday to the most special person in my life.</p>
+    <button id="continueBtn">Continue ✨</button>
+  </section>
+
+  <section id="message" class="hidden">
+    <div class="message-card">
+      <div class="small-heart">♥</div>
+      <div class="eyebrow">A little something from me</div>
+      <h2>For My Soni ❤️</h2>
+      <p>
+        Replace this message with your own words for Soni.
+        Write what you truly want her to remember about this birthday,
+        your memories together, and how much she means to you.
+      </p>
+      <div class="signature">With all my love.</div>
+    </div>
+  </section>
+</main>
+
+<audio id="music" src="wishing.m4a" preload="auto"></audio>
+<script src="script.js"></script>
+</body>
+</html>
